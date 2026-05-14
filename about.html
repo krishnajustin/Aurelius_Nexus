@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Aurelius Nexus</title>
+<meta name="description" content="The studio behind Aurelius Nexus." />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 30,16 16,30 2,16' fill='%23c9a35a'/></svg>" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" fill="none">
+            <polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/>
+            <polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/>
+            <polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/>
+          </svg>
+        </span>
+        <span class="brand-name">Aurelius <em>Nexus</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="testimonials.html">Clients</a></li>
+        <li><a href="journey.html" class="cta">Begin Journey</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-head" data-screen-label="About Head">
+  <div class="container page-head-content">
+    <div class="eyebrow center">The Studio</div>
+    <h1 class="display">Where vision <br/>meets <em>execution.</em></h1>
+    <p class="sub">A small studio at the intersection of code, capital, and craft.</p>
+    <nav class="crumbs">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="current">About</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section" data-screen-label="About">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="reveal">
+          <div class="eyebrow">Origin</div>
+          <h2 class="display about-display">A studio, <br/>not a <em>factory.</em></h2>
+        </div>
+        <div class="reveal d1">
+          <p>Aurelius Nexus was founded on a singular belief: that the intersection of technology, finance, and automation holds the key to extraordinary outcomes. We are not a factory — we are a studio. Every project receives the attention, strategy, and craftsmanship it deserves.</p>
+          <p>From bespoke web platforms to institutional-grade trading insights and end-to-end automation pipelines, we serve founders, traders, and enterprises who refuse to settle for ordinary.</p>
+          <p>We work with a deliberately small roster of clients each quarter. This isn't scarcity marketing — it's how we maintain the standard.</p>
+        </div>
+        <div class="about-meta reveal d2">
+          <div class="about-meta-avatar">KR</div>
+          <div>
+            <span class="about-meta-name">Krishna R.</span>
+            <span class="about-meta-role">Founder &amp; Creative Director</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual reveal d1">
+        <div class="about-orbit">
+          <div class="about-orbit-ring"></div>
+          <div class="about-orbit-ring r2"></div>
+          <div class="about-orbit-ring r3"></div>
+          <div class="about-orbit-ring r4"></div>
+        </div>
+        <canvas id="about-canvas"></canvas>
+      </div>
+    </div>
+
+    <div class="stats reveal d3" style="margin-top: 80px;">
+      <div class="stat"><div class="stat-num">05<span style="color:var(--gold-deep);">+</span></div><div class="stat-label">Projects Delivered</div></div>
+      <div class="stat"><div class="stat-num">98<span style="color:var(--gold-deep); font-size:22px;">%</span></div><div class="stat-label">Client Retention</div></div>
+      <div class="stat"><div class="stat-num">3<span style="color:var(--gold-deep);">×</span></div><div class="stat-label">Avg. ROI Lift</div></div>
+      <div class="stat"><div class="stat-num">24<span style="color:var(--gold-deep); font-size:22px;">/7</span></div><div class="stat-label">Dedicated Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section" style="background: linear-gradient(180deg, transparent, var(--bg-1) 30%, var(--bg-1) 70%, transparent); padding-top: 80px;">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow center">The Principles</div>
+      <h2 class="display">Four convictions <br/>we won't <em>compromise.</em></h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal d1" data-tilt="5">
+        <div class="service-num">i.</div>
+        <h3 class="service-name">Craft over<br/>convenience</h3>
+        <p class="service-desc">Every pixel, every line of code, every interaction is considered. Shortcuts produce ordinary work. We don't ship ordinary.</p>
+      </article>
+      <article class="service-card reveal d2" data-tilt="5">
+        <div class="service-num">ii.</div>
+        <h3 class="service-name">Strategy<br/>before pixels</h3>
+        <p class="service-desc">A beautiful website that doesn't convert is a sculpture, not a tool. We start with goals, audiences, and outcomes.</p>
+      </article>
+      <article class="service-card reveal d3" data-tilt="5">
+        <div class="service-num">iii.</div>
+        <h3 class="service-name">Transparency<br/>throughout</h3>
+        <p class="service-desc">Clear scope. Honest pricing. Weekly updates. No surprises at the invoice or the launch.</p>
+      </article>
+      <article class="service-card reveal d4" data-tilt="5">
+        <div class="service-num">iv.</div>
+        <h3 class="service-name">Partnership<br/>not transaction</h3>
+        <p class="service-desc">We measure success in your second year, not your first launch. The relationship is the product.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom: 0;" data-screen-label="About CTA">
+  <div class="container">
+    <div style="text-align: center; padding: 80px 0; border-top: 1px solid var(--line);">
+      <div class="eyebrow center" style="margin-bottom: 20px;">Take the next step</div>
+      <h2 class="display" style="font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 32px;">Let's build something <em>extraordinary.</em></h2>
+      <a href="journey.html" class="btn" data-magnetic>
+        <span>Begin Your Journey</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
+          <span class="brand-name">Aurelius <em>Nexus</em></span>
+        </a>
+        <p class="footer-tag">A studio at the intersection of code, capital, and craft. Built for those who refuse to settle.</p>
+      </div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="testimonials.html">Clients</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Web Development</a></li><li><a href="services.html">Trading Intelligence</a></li><li><a href="services.html">Automation</a></li><li><a href="journey.html">Bespoke Engagements</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">contact@aureliusnexus.com</a></li><li><a href="contact.html">+91 95818 98403</a></li><li><a href="contact.html">LinkedIn</a></li><li><a href="contact.html">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AURELIUS NEXUS · ALL RIGHTS RESERVED</span>
+      <span>CRAFTED WITH <span class="gold">◆</span> IN HYDERABAD</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="scene-3d.js"></script>
+<script src="interactions.js"></script>
+</body>
+</html>
