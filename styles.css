@@ -2574,11 +2574,24 @@ html:not(.js) .reveal {
 .anime-runner.is-riding .ar-leg-l,
 .anime-runner.is-riding .ar-leg-r {
   /* tucked riding pose */
-  transform-origin: 30px 52px;
+  transform-origin: 30px 54px;
 }
 .anime-runner.is-riding .ar-leg-l { transform: rotate(55deg) scaleY(0.75); }
 .anime-runner.is-riding .ar-leg-r { transform: rotate(-10deg) scaleY(0.75); }
-.anime-runner.is-riding .ar-cape { opacity: 0.5; }
+.anime-runner.is-riding .ar-cape,
+.anime-runner.is-riding .ar-jacket-tail { opacity: 0.55; }
+
+/* Unfiltered guy: slightly taller frame, sharper shadow */
+.anime-runner--unfiltered .anime-runner-body {
+  height: 76px;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.55));
+}
+.anime-runner--unfiltered .anime-name {
+  letter-spacing: 0.2em;
+  background: linear-gradient(135deg, #d0a84c 0%, #e4c98a 50%, #a8842e 100%);
+  color: #08090c;
+  box-shadow: 0 0 0 1px rgba(208, 168, 76, 0.35), 0 4px 16px rgba(208, 168, 76, 0.35);
+}
 
 .anime-runner-svg {
   width: 100%;
@@ -2699,6 +2712,15 @@ html:not(.js) .reveal {
   text-align: center;
   text-wrap: pretty;
 }
+/* Unfiltered NX: slightly sharper bubble */
+.anime-runner--unfiltered .anime-bubble {
+  border-color: rgba(208, 168, 76, 0.45);
+  background: linear-gradient(160deg, #12151c 0%, #0a0c10 100%);
+}
+.anime-runner--unfiltered .anime-bubble-text {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
 .anime-bubble-tail {
   position: absolute;
   left: 50%;
@@ -2726,23 +2748,24 @@ html:not(.js) .reveal {
 
 /* Slow foot walk cycle */
 .anime-runner.is-running .ar-leg-l {
-  transform-origin: 27px 52px;
+  transform-origin: 26px 54px;
   animation: arLegL 0.72s ease-in-out infinite;
 }
 .anime-runner.is-running .ar-leg-r {
-  transform-origin: 37px 52px;
+  transform-origin: 38px 54px;
   animation: arLegR 0.72s ease-in-out infinite;
 }
 .anime-runner.is-running .ar-arm-l {
-  transform-origin: 20px 38px;
+  transform-origin: 18px 39px;
   animation: arArmL 0.72s ease-in-out infinite;
 }
 .anime-runner.is-running .ar-arm-r {
-  transform-origin: 44px 38px;
+  transform-origin: 46px 39px;
   animation: arArmR 0.72s ease-in-out infinite;
 }
-.anime-runner.is-running .ar-cape {
-  transform-origin: 20px 36px;
+.anime-runner.is-running .ar-cape,
+.anime-runner.is-running .ar-jacket-tail {
+  transform-origin: 18px 40px;
   animation: arCape 0.85s ease-in-out infinite alternate;
 }
 .anime-runner.is-running .anime-runner-svg {
@@ -2750,11 +2773,11 @@ html:not(.js) .reveal {
 }
 /* Riding: arms hold bars */
 .anime-runner.is-riding .ar-arm-l {
-  transform-origin: 20px 38px;
+  transform-origin: 18px 39px;
   transform: rotate(-40deg);
 }
 .anime-runner.is-riding .ar-arm-r {
-  transform-origin: 44px 38px;
+  transform-origin: 46px 39px;
   transform: rotate(35deg);
 }
 .anime-runner.is-riding-anim .anime-runner-body {
@@ -2792,7 +2815,7 @@ html:not(.js) .reveal {
 
 /* Wave / happy / idle */
 .anime-runner.is-wave .ar-arm-r {
-  transform-origin: 44px 38px;
+  transform-origin: 46px 39px;
   animation: arWave 0.45s ease-in-out 2;
 }
 @keyframes arWave {
@@ -2806,11 +2829,16 @@ html:not(.js) .reveal {
   animation: arPop 0.5s var(--ease-out);
 }
 .anime-runner.is-talking .ar-mouth {
-  animation: arTalk 0.35s ease-in-out infinite;
+  animation: arTalk 0.32s ease-in-out infinite;
 }
 @keyframes arTalk {
-  0%, 100% { d: path('M28 29 Q32 32 36 29'); }
-  50% { d: path('M28 29 Q32 33.5 36 29'); }
+  0%, 100% { d: path('M27 28 Q32 31.5 38 27.5'); }
+  50% { d: path('M27 28 Q32 33.5 38 28'); }
+}
+
+/* Smirk pop when happy / hover */
+.anime-runner.is-happy .ar-mouth {
+  stroke: #d0a84c;
 }
 
 .anime-runner.is-arrive .anime-runner-svg {

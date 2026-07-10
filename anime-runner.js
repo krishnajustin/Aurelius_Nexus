@@ -1,6 +1,6 @@
 /* ============================================
-   NX — Studio companion
-   Very slow foot patrol · rides bike / cycle / car to clicks
+   NX — Unfiltered studio companion (Grok energy)
+   Slow foot patrol · random bike / cycle / car on clicks
    ============================================ */
 
 (function () {
@@ -55,48 +55,61 @@
     ];
   }
 
+  // Unfiltered Grok-vibe dialogue — sharp, dry, zero corporate
   const greetings = [
-    "I'm NX. I stroll on foot — but for clicks, I grab a ride.",
-    "NX here. Slow patrol. Random wheels when you click.",
-    "Welcome. Watch me walk… then bike, cycle, or car.",
+    "NX. Unfiltered. I walk slow 'cause I can. Click and I steal a ride.",
+    "Yo. I'm NX — no filters, no corporate script. Just vibes and wheels.",
+    "What's good. Name's NX. I don't sugarcoat. I do roll up on a random ride.",
   ];
 
   const vehicleLines = {
-    bike: ['Bike time.', 'Pedaling over…', 'Two wheels. One NX.'],
-    cycle: ['Motorcycle mode.', 'Cycle engaged.', 'Vroom — gently.'],
-    car: ['Car service.', 'Driving over…', 'NX rides gold.'],
+    bike: ['Bike. Classic. Moving.', 'Pedals > meetings.', 'Two wheels. Zero patience.'],
+    cycle: ['Motorcycle. Obviously.', 'Throttle up. Hold on.', 'Loud entrance. Intentional.'],
+    car: ['Car. Soft life mode.', 'Driving. Don't clap.', 'Gold doors. Don't make it weird.'],
   };
 
   const arriveLines = {
-    bike: ['Parked. Clicking…', 'Bike lock. Go.'],
-    cycle: ['Kickstand. Opening…', 'Cycle stowed.'],
-    car: ['Parked. Here we go.', 'Doors open…'],
+    bike: ['Parked. Your move.', 'Bike down. Button up.'],
+    cycle: ['Kickstand. Done.', 'Here. Don't waste the click.'],
+    car: ['Parked. Let's go.', 'Doors. Action. Bye.'],
   };
 
   const chatLines = [
-    "I'm NX. Foot patrol is slow on purpose.",
-    'Click anything — I roll over on a bike, cycle, or car. Random each time.',
-    'Need a path? Try Services or Begin Journey.',
-    'I walk so you can catch me. I drive so you wait stylishly.',
-    'Still named NX. Still gold.',
+    "I'm NX. Soft-spoken sites bore me. This one doesn't.",
+    "Click stuff. I'll show up. Random ride each time — I like chaos.",
+    "Need something real? Journey. Skip the small talk.",
+    "I walk slow on purpose. Savor the frame rate.",
+    "Filters? Never heard of her. Ask me anything.",
+    "Gold badge, black jacket, zero filter. Package deal.",
+    "Corporate robots say 'How can I help you today?' I say 'What do you want.'",
+    "Pricing page is honest. I respect that. Rare.",
   ];
 
   const tipByPage = {
-    'index.html': 'Home. Send me somewhere with a click — random ride each time.',
-    'about.html': 'Studio soul page. Four principles.',
-    'services.html': 'Three pillars: web, markets, automation.',
-    'pricing.html': 'Tiers are starting points.',
-    'testimonials.html': 'Client voices — swipe or arrows.',
-    'contact.html': 'Quick note, or Journey for a full brief.',
-    'journey.html': "Four steps. I'll keep strolling nearby.",
+    'index.html': "Home base. Click anything — I roll up. Don't just scroll forever.",
+    'about.html': "Studio DNA. Four principles. Short. Read them once.",
+    'services.html': "Web. Markets. Automation. Pick a pillar or take all three.",
+    'pricing.html': "Tiers are starting lines, not cages. Enterprise = we talk real numbers.",
+    'testimonials.html': "Receipts. Real clients. Swipe if you're the type.",
+    'contact.html': "Quick note hits WhatsApp. Type it. Send it. Move on.",
+    'journey.html': "Four steps. No fluff. Hit Send Request — WhatsApp, done.",
   };
+
+  const hoverLines = [
+    'Yeah?',
+    'Speak.',
+    'NX.',
+    'What.',
+    'Hit me.',
+    "I'm listening… kinda.",
+  ];
 
   const root = document.createElement('div');
   root.id = 'animeRunner';
-  root.className = 'anime-runner';
+  root.className = 'anime-runner anime-runner--unfiltered';
   root.setAttribute('role', 'button');
   root.setAttribute('tabindex', '0');
-  root.setAttribute('aria-label', 'NX, studio companion. Click to talk.');
+  root.setAttribute('aria-label', 'NX, unfiltered studio companion. Click to talk.');
   root.innerHTML = `
     <div class="anime-bubble" id="animeBubble" hidden>
       <span class="anime-bubble-text"></span>
@@ -182,36 +195,80 @@
       </div>
 
       <div class="anime-runner-body" aria-hidden="true">
-        <svg class="anime-runner-svg" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="ar-cape" d="M18 34 C6 42 4 58 10 68 C16 58 18 48 22 40 Z" fill="#8a6a2a" opacity="0.85"/>
+        <!-- Unfiltered anime guy: messy hair, leather jacket, smirk, gold accents -->
+        <svg class="anime-runner-svg" viewBox="0 0 64 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Legs -->
           <g class="ar-leg ar-leg-l">
-            <rect x="24" y="52" width="6" height="16" rx="3" fill="#1a1e28"/>
-            <rect x="22" y="66" width="10" height="5" rx="2" fill="#d0a84c"/>
+            <rect x="23" y="54" width="7" height="18" rx="3" fill="#0c0e12"/>
+            <rect x="21" y="69" width="11" height="5" rx="2" fill="#1a1e28"/>
+            <rect x="21" y="72" width="11" height="2" rx="1" fill="#d0a84c"/>
           </g>
           <g class="ar-leg ar-leg-r">
-            <rect x="34" y="52" width="6" height="16" rx="3" fill="#12151c"/>
-            <rect x="32" y="66" width="10" height="5" rx="2" fill="#e4c98a"/>
+            <rect x="34" y="54" width="7" height="18" rx="3" fill="#12151c"/>
+            <rect x="32" y="69" width="11" height="5" rx="2" fill="#1a1e28"/>
+            <rect x="32" y="72" width="11" height="2" rx="1" fill="#e4c98a"/>
           </g>
-          <rect x="22" y="34" width="20" height="22" rx="8" fill="#d0a84c"/>
-          <rect x="24" y="38" width="16" height="10" rx="4" fill="#f3e6c0" opacity="0.35"/>
+
+          <!-- Leather jacket body -->
+          <path class="ar-cape ar-jacket-tail" d="M18 38 C12 44 10 58 14 68 C18 60 20 50 24 42 Z" fill="#0a0c10" opacity="0.9"/>
+          <path d="M20 34 L32 32 L44 34 L46 54 Q44 60 32 60 Q20 60 18 54 Z" fill="#141820"/>
+          <!-- Gold zipper + collar -->
+          <path d="M32 34 V58" stroke="#d0a84c" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="32" cy="38" r="1.2" fill="#f3e6c0"/>
+          <circle cx="32" cy="44" r="1.2" fill="#f3e6c0"/>
+          <circle cx="32" cy="50" r="1.2" fill="#f3e6c0"/>
+          <path d="M22 34 L32 30 L42 34" stroke="#d0a84c" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <!-- Inner shirt -->
+          <path d="M28 36 L32 42 L36 36" fill="#1a1420"/>
+
+          <!-- Arms -->
           <g class="ar-arm ar-arm-l">
-            <rect x="14" y="36" width="10" height="5" rx="2.5" fill="#f0d9a0"/>
+            <rect x="12" y="36" width="11" height="6" rx="3" fill="#141820"/>
+            <circle cx="13" cy="39" r="2.4" fill="#e8c4a0"/>
           </g>
           <g class="ar-arm ar-arm-r">
-            <rect x="40" y="36" width="10" height="5" rx="2.5" fill="#e4c98a"/>
+            <rect x="41" y="36" width="11" height="6" rx="3" fill="#0f1218"/>
+            <circle cx="51" cy="39" r="2.4" fill="#e8c4a0"/>
           </g>
-          <circle cx="32" cy="22" r="14" fill="#ffd9b8"/>
-          <path d="M18 20 C18 8 46 8 46 20 C46 12 40 6 32 6 C24 6 18 12 18 20 Z" fill="#1a1420"/>
-          <path d="M18 18 C16 24 18 30 22 32 L20 18 Z" fill="#1a1420"/>
-          <path d="M46 18 C48 24 46 30 42 32 L44 18 Z" fill="#1a1420"/>
-          <path d="M28 8 C30 2 38 2 40 10 C36 6 30 6 28 8 Z" fill="#d0a84c"/>
-          <ellipse cx="26" cy="23" rx="2.2" ry="2.8" fill="#1a1420"/>
-          <ellipse cx="38" cy="23" rx="2.2" ry="2.8" fill="#1a1420"/>
-          <circle cx="26.7" cy="22.2" r="0.7" fill="#fff"/>
-          <circle cx="38.7" cy="22.2" r="0.7" fill="#fff"/>
-          <path class="ar-mouth" d="M28 29 Q32 32 36 29" stroke="#c47a6a" stroke-width="1.4" stroke-linecap="round" fill="none"/>
-          <ellipse cx="22" cy="27" rx="2.5" ry="1.4" fill="#ffb0a0" opacity="0.55"/>
-          <ellipse cx="42" cy="27" rx="2.5" ry="1.4" fill="#ffb0a0" opacity="0.55"/>
+
+          <!-- Neck -->
+          <rect x="28" y="30" width="8" height="6" rx="2" fill="#e8c4a0"/>
+
+          <!-- Head -->
+          <circle cx="32" cy="20" r="13.5" fill="#f0c9a8"/>
+
+          <!-- Messy spiky hair (unfiltered guy energy) -->
+          <path d="M18 18 C16 8 24 2 32 3 C40 2 48 8 46 18 C48 12 46 6 40 4 C36 1 28 1 24 4 C18 6 16 12 18 18 Z" fill="#0d0f14"/>
+          <path d="M20 12 L16 4 L22 10 Z" fill="#0d0f14"/>
+          <path d="M28 6 L30 -1 L33 6 Z" fill="#12151c"/>
+          <path d="M36 5 L42 -2 L40 8 Z" fill="#0d0f14"/>
+          <path d="M44 12 L50 5 L46 16 Z" fill="#12151c"/>
+          <!-- Side fringe -->
+          <path d="M18 16 C16 22 18 28 22 30 L20 16 Z" fill="#0d0f14"/>
+          <path d="M46 16 C48 22 46 28 42 30 L44 16 Z" fill="#0d0f14"/>
+          <!-- Gold hair streak -->
+          <path d="M30 4 C32 0 36 1 37 6 C34 4 31 4 30 4 Z" fill="#d0a84c" opacity="0.85"/>
+
+          <!-- Sharp half-lidded eyes -->
+          <path d="M24 20 L29 19.5" stroke="#1a1420" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M35 19.5 L40 20" stroke="#1a1420" stroke-width="1.6" stroke-linecap="round"/>
+          <ellipse cx="26.5" cy="22.5" rx="2.4" ry="2.6" fill="#1a1420"/>
+          <ellipse cx="37.5" cy="22.5" rx="2.4" ry="2.6" fill="#1a1420"/>
+          <circle cx="27.2" cy="21.7" r="0.75" fill="#fff"/>
+          <circle cx="38.2" cy="21.7" r="0.75" fill="#fff"/>
+          <!-- Gold iris glint -->
+          <circle cx="26.2" cy="23" r="0.55" fill="#d0a84c" opacity="0.7"/>
+          <circle cx="37.2" cy="23" r="0.55" fill="#d0a84c" opacity="0.7"/>
+
+          <!-- Cocky smirk -->
+          <path class="ar-mouth" d="M27 28 Q32 31.5 38 27.5" stroke="#b56a58" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+          <!-- Earring -->
+          <circle cx="45.5" cy="24" r="1.4" fill="none" stroke="#d0a84c" stroke-width="1.1"/>
+          <circle cx="45.5" cy="26.5" r="0.7" fill="#d0a84c"/>
+
+          <!-- Brow scar / mark -->
+          <path d="M24 17 L27 16" stroke="#c9a08a" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
         </svg>
         <div class="anime-runner-spark"></div>
       </div>
@@ -461,21 +518,21 @@
 
   function talkToUser() {
     if (busy) {
-      say('Riding — almost there…', 1800);
+      say('Still mid-ride. Chill.', 1800);
       return;
     }
     clickCount += 1;
     root.classList.add('is-wave');
     setTimeout(() => root.classList.remove('is-wave'), 900);
     if (clickCount === 1) {
-      say("I'm NX. Slow walk on patrol. Random ride when you click.", 4200);
+      say("NX. Unfiltered. I stroll until you click — then I steal a ride.", 4400);
       return;
     }
     if (clickCount === 2) {
-      say(tipByPage[pageKey()] || pick(chatLines), 4000);
+      say(tipByPage[pageKey()] || pick(chatLines), 4200);
       return;
     }
-    say(pick(chatLines), 3600);
+    say(pick(chatLines), 3800);
   }
 
   function scheduleIdleChat() {
@@ -515,7 +572,7 @@
     if (busy) return;
     root.classList.add('is-happy');
     if (!root.classList.contains('is-talking')) {
-      say(pick(['Hey.', 'Yes?', 'NX here.', 'Need a ride?']), 1600);
+      say(pick(hoverLines), 1600);
     }
   });
   root.addEventListener('mouseleave', () => root.classList.remove('is-happy'));
@@ -533,7 +590,7 @@
       if (busy) {
         e.preventDefault();
         e.stopPropagation();
-        say('Still rolling… hold on.', 1800);
+        say('Busy. Wait your turn.', 1800);
         return;
       }
 
