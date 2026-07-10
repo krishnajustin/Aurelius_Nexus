@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Four steps to a tailored proposal from Aurelius Nexus." />
+<meta name="theme-color" content="#08090c" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Begin Journey — Aurelius Nexus" />
+<meta property="og:description" content="Four steps to a tailored proposal from Aurelius Nexus." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Begin Journey — Aurelius Nexus" />
+<link rel="canonical" href="https://aureliusnexus.com/journey.html" />
 <title>Begin Your Journey — Aurelius Nexus</title>
-<meta name="description" content="Tell us about your vision. We'll map the path." />
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 30,16 16,30 2,16' fill='%23c9a35a'/></svg>" type="image/svg+xml" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="cursor"></div>
-<div class="cursor-dot"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <div class="preloader-mark"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></div>
+    <div class="preloader-bar"><span></span></div>
+    <div class="preloader-label">Aurelius Nexus</div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
 
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Primary">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="brand">
-        <span class="brand-mark">
-          <svg viewBox="0 0 40 40" fill="none">
-            <polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/>
-            <polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/>
-            <polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/>
-          </svg>
-        </span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
         <span class="brand-name">Aurelius <em>Nexus</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -37,22 +46,19 @@
         <li><a href="testimonials.html">Clients</a></li>
         <li><a href="journey.html" class="cta">Begin Journey</a></li>
       </ul>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
 
-<section class="journey" data-screen-label="Journey">
-  <div class="journey-bg">
+<section class="journey">
+  <div class="journey-bg" aria-hidden="true">
     <canvas class="journey-bg-canvas" id="journey-canvas"></canvas>
   </div>
 
   <div class="container journey-inner">
-
     <div class="section-head" style="margin-bottom: 48px;">
       <div class="eyebrow center">Onboarding</div>
       <h1 class="display" style="font-size: clamp(2.4rem, 5vw, 4rem); margin: 18px 0 12px;">
@@ -61,130 +67,109 @@
       <p class="sub">Four short steps. Two minutes. A direct path to the right conversation.</p>
     </div>
 
-    <!-- Progress -->
-    <div class="journey-progress" id="progress">
-      <div class="journey-step active" data-i="0">
+    <div class="journey-progress" id="progress" role="list" aria-label="Progress">
+      <div class="journey-step active" data-i="0" role="listitem">
         <div class="journey-step-dot">i</div>
         <div class="journey-step-label">Service</div>
       </div>
-      <div class="journey-step" data-i="1">
+      <div class="journey-step" data-i="1" role="listitem">
         <div class="journey-step-dot">ii</div>
         <div class="journey-step-label">Scope</div>
       </div>
-      <div class="journey-step" data-i="2">
+      <div class="journey-step" data-i="2" role="listitem">
         <div class="journey-step-dot">iii</div>
         <div class="journey-step-label">Details</div>
       </div>
-      <div class="journey-step" data-i="3">
+      <div class="journey-step" data-i="3" role="listitem">
         <div class="journey-step-dot">✓</div>
         <div class="journey-step-label">Confirm</div>
       </div>
     </div>
 
-    <!-- Panel -->
     <div class="journey-panel" id="panel">
 
-      <!-- STEP 1: Service -->
       <div class="journey-screen active" data-screen="0">
         <div class="journey-eyebrow">Step One · 01 / 04</div>
         <h2 class="journey-title">Which path calls to you?</h2>
         <p class="journey-desc">Choose the service area you'd like to explore. You can refine the scope on the next screen.</p>
 
-        <div class="choice-grid">
-          <button type="button" class="choice" data-key="service" data-value="Web Development">
+        <div class="choice-grid" role="group" aria-label="Service selection">
+          <button type="button" class="choice" data-key="service" data-value="Web Development" aria-pressed="false">
             <span class="choice-num">i.</span>
             <span class="choice-title">Web Development</span>
             <span class="choice-desc">Bespoke websites, e-commerce, SaaS platforms.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="service" data-value="Trading Intelligence">
+          <button type="button" class="choice" data-key="service" data-value="Trading Intelligence" aria-pressed="false">
             <span class="choice-num">ii.</span>
             <span class="choice-title">Trading Intelligence</span>
             <span class="choice-desc">Market signals, strategies, research community.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="service" data-value="Automation Solutions">
+          <button type="button" class="choice" data-key="service" data-value="Automation Solutions" aria-pressed="false">
             <span class="choice-num">iii.</span>
             <span class="choice-title">Automation Solutions</span>
             <span class="choice-desc">Workflow automation, AI agents, custom pipelines.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="service" data-value="Multiple — let's discuss">
+          <button type="button" class="choice" data-key="service" data-value="Multiple — let's discuss" aria-pressed="false">
             <span class="choice-num">iv.</span>
             <span class="choice-title">Multiple Pillars</span>
             <span class="choice-desc">Cross-discipline. Let's discuss the full picture.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
         </div>
 
         <div class="journey-nav">
-          <button class="journey-back" id="back-0" disabled>← Back</button>
-          <button class="btn" data-magnetic data-next="0" disabled>
+          <button type="button" class="journey-back" id="back-0" disabled>← Back</button>
+          <button type="button" class="btn" data-magnetic data-next="0" disabled>
             <span>Continue</span>
-            <span class="arrow">→</span>
+            <span class="arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </div>
 
-      <!-- STEP 2: Scope -->
       <div class="journey-screen" data-screen="1">
         <div class="journey-eyebrow">Step Two · 02 / 04</div>
         <h2 class="journey-title">What's your <em>tier?</em></h2>
         <p class="journey-desc">A rough indication of scope helps us prepare the right conversation. Final scope is always tailored to you.</p>
 
-        <div class="choice-grid">
-          <button type="button" class="choice" data-key="tier" data-value="Starter">
+        <div class="choice-grid" role="group" aria-label="Tier selection">
+          <button type="button" class="choice" data-key="tier" data-value="Starter" aria-pressed="false">
             <span class="choice-num">i.</span>
             <span class="choice-title">Starter</span>
             <span class="choice-desc">From $30 · Landing page, brand site, or focused engagement.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="tier" data-value="Professional">
+          <button type="button" class="choice" data-key="tier" data-value="Professional" aria-pressed="false">
             <span class="choice-num">ii.</span>
             <span class="choice-title">Professional</span>
             <span class="choice-desc">From $90 · Full-stack site, signals, and basic automation.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="tier" data-value="Enterprise">
+          <button type="button" class="choice" data-key="tier" data-value="Enterprise" aria-pressed="false">
             <span class="choice-num">iii.</span>
             <span class="choice-title">Enterprise</span>
             <span class="choice-desc">Custom · End-to-end transformation, dedicated team.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
-          <button type="button" class="choice" data-key="tier" data-value="Not Sure Yet">
+          <button type="button" class="choice" data-key="tier" data-value="Not Sure Yet" aria-pressed="false">
             <span class="choice-num">iv.</span>
             <span class="choice-title">Not Sure Yet</span>
             <span class="choice-desc">That's fine — we'll help you find the right fit.</span>
-            <span class="choice-check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            </span>
+            <span class="choice-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
           </button>
         </div>
 
         <div class="journey-nav">
-          <button class="journey-back" id="back-1">← Back</button>
-          <button class="btn" data-magnetic data-next="1" disabled>
+          <button type="button" class="journey-back" id="back-1">← Back</button>
+          <button type="button" class="btn" data-magnetic data-next="1" disabled>
             <span>Continue</span>
-            <span class="arrow">→</span>
+            <span class="arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </div>
 
-      <!-- STEP 3: Details -->
       <div class="journey-screen" data-screen="2">
         <div class="journey-eyebrow">Step Three · 03 / 04</div>
         <h2 class="journey-title">Tell us about <em>you.</em></h2>
@@ -192,72 +177,68 @@
 
         <div class="form-row">
           <div class="field" style="margin-bottom: 0;">
-            <label>Your Name</label>
-            <input type="text" id="j-name" placeholder="Jane Doe" required />
+            <label for="j-name">Your Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="j-name" name="name" placeholder="Jane Doe" required autocomplete="name" />
+            <div class="field-error" role="alert"></div>
           </div>
           <div class="field" style="margin-bottom: 0;">
-            <label>Email</label>
-            <input type="email" id="j-email" placeholder="jane@company.com" required />
+            <label for="j-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="j-email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+            <div class="field-error" role="alert"></div>
           </div>
         </div>
         <div class="form-row">
           <div class="field" style="margin-bottom: 0;">
-            <label>Company (optional)</label>
-            <input type="text" id="j-company" placeholder="Company name" />
+            <label for="j-company">Company (optional)</label>
+            <input type="text" id="j-company" name="company" placeholder="Company name" autocomplete="organization" />
           </div>
           <div class="field" style="margin-bottom: 0;">
-            <label>Phone (optional)</label>
-            <input type="tel" id="j-phone" placeholder="+91 XXXXX XXXXX" />
+            <label for="j-phone">Phone (optional)</label>
+            <input type="tel" id="j-phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
           </div>
         </div>
         <div class="field">
-          <label>Tell us about your vision</label>
-          <textarea id="j-vision" placeholder="What are you trying to build? What does success look like?"></textarea>
+          <label for="j-vision">Tell us about your vision</label>
+          <textarea id="j-vision" name="vision" placeholder="What are you trying to build? What does success look like?"></textarea>
         </div>
 
         <div class="journey-nav">
-          <button class="journey-back" id="back-2">← Back</button>
-          <button class="btn" data-magnetic data-next="2">
+          <button type="button" class="journey-back" id="back-2">← Back</button>
+          <button type="button" class="btn" data-magnetic data-next="2">
             <span>Review &amp; Confirm</span>
-            <span class="arrow">→</span>
+            <span class="arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </div>
 
-      <!-- STEP 4: Confirm -->
       <div class="journey-screen" data-screen="3">
         <div class="journey-eyebrow">Step Four · 04 / 04</div>
         <h2 class="journey-title">Ready to <em>send?</em></h2>
         <p class="journey-desc">Review the details below. When you're ready, we'll be in touch within 24 hours.</p>
-
         <div class="j-summary" id="summary"></div>
-
         <div class="journey-nav">
-          <button class="journey-back" id="back-3">← Back</button>
-          <button class="btn" data-magnetic id="submit-journey">
+          <button type="button" class="journey-back" id="back-3">← Back</button>
+          <button type="button" class="btn" data-magnetic id="submit-journey">
             <span>Send to the Studio</span>
-            <span class="arrow">→</span>
+            <span class="arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </div>
 
-      <!-- SUCCESS -->
       <div class="journey-screen" data-screen="4">
         <div class="j-success">
-          <div class="j-success-mark">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
+          <div class="j-success-mark" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <div class="journey-eyebrow" style="margin-bottom: 14px;">Sent</div>
           <h2 class="journey-title" style="margin-bottom: 16px;">Welcome to the <em>studio.</em></h2>
           <p class="journey-desc" style="margin: 0 auto 36px;">
-            We've received your inquiry. A member of the team will reach out within 24 hours. <br/>
+            We've received your inquiry. A member of the team will reach out within 24 hours.<br/>
             In the meantime, feel free to explore our work.
           </p>
           <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
             <a href="services.html" class="btn btn-ghost" data-magnetic><span>Explore Services</span></a>
-            <a href="index.html" class="btn" data-magnetic><span>Back to Home</span><span class="arrow">→</span></a>
+            <a href="index.html" class="btn" data-magnetic><span>Back to Home</span><span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -277,184 +258,71 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js" defer></script>
 <script>
-/* Subtle background 3D layer for journey */
-(function() {
+/* Lightweight journey background — only when capable */
+document.addEventListener('DOMContentLoaded', function () {
   if (typeof THREE === 'undefined') return;
-  const canvas = document.getElementById('journey-canvas');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(max-width: 700px)').matches) return;
+
+  var canvas = document.getElementById('journey-canvas');
   if (!canvas) return;
 
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
   camera.position.z = 10;
-
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
   function resize() {
-    const w = canvas.clientWidth, h = canvas.clientHeight;
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) return;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
   }
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', resize, { passive: true });
 
-  // Drifting golden particles
-  const N = 220;
-  const positions = new Float32Array(N * 3);
-  for (let i = 0; i < N; i++) {
-    positions[i*3]   = (Math.random() - 0.5) * 20;
-    positions[i*3+1] = (Math.random() - 0.5) * 12;
-    positions[i*3+2] = (Math.random() - 0.5) * 8;
+  var N = 120;
+  var positions = new Float32Array(N * 3);
+  for (var i = 0; i < N; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 20;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 12;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
   }
-  const geo = new THREE.BufferGeometry();
+  var geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  const mat = new THREE.PointsMaterial({
-    color: 0xd4b26a, size: 0.04, transparent: true, opacity: 0.6,
+  var points = new THREE.Points(geo, new THREE.PointsMaterial({
+    color: 0xd4b26a, size: 0.04, transparent: true, opacity: 0.55,
     blending: THREE.AdditiveBlending, depthWrite: false
-  });
-  const points = new THREE.Points(geo, mat);
+  }));
   scene.add(points);
 
-  // Floating wireframe diamonds
-  const diamonds = [];
-  for (let i = 0; i < 3; i++) {
-    const d = new THREE.Mesh(
-      new THREE.OctahedronGeometry(0.6 + Math.random() * 0.4, 0),
-      new THREE.MeshBasicMaterial({ color: 0xc9a35a, wireframe: true, transparent: true, opacity: 0.18 })
-    );
-    d.position.set((Math.random()-0.5) * 12, (Math.random()-0.5) * 7, -2 - Math.random() * 4);
-    d.userData = { sx: Math.random() * 0.3, sy: Math.random() * 0.3 };
-    scene.add(d);
-    diamonds.push(d);
-  }
-
   resize();
-  const clock = new THREE.Clock();
+  var clock = new THREE.Clock();
+  var running = true;
+  var io = new IntersectionObserver(function (entries) {
+    running = entries[0].isIntersecting;
+  }, { threshold: 0.01 });
+  io.observe(canvas);
+
   function tick() {
-    const t = clock.getElapsedTime();
-    points.rotation.y = t * 0.02;
-    points.rotation.x = Math.sin(t * 0.1) * 0.1;
-    diamonds.forEach(d => {
-      d.rotation.x = t * d.userData.sx;
-      d.rotation.y = t * d.userData.sy;
-    });
-    renderer.render(scene, camera);
+    if (running) {
+      var t = clock.getElapsedTime();
+      points.rotation.y = t * 0.02;
+      points.rotation.x = Math.sin(t * 0.1) * 0.08;
+      renderer.render(scene, camera);
+    }
     requestAnimationFrame(tick);
   }
   tick();
-})();
+});
 </script>
-<script src="interactions.js"></script>
-<script>
-/* Journey flow logic */
-(function() {
-  const state = { step: 0, data: {} };
-  const screens = document.querySelectorAll('.journey-screen');
-  const stepDots = document.querySelectorAll('.journey-step');
-
-  function render() {
-    screens.forEach(s => s.classList.toggle('active', +s.dataset.screen === state.step));
-    stepDots.forEach((d, i) => {
-      d.classList.remove('active', 'done');
-      if (i < state.step) d.classList.add('done');
-      else if (i === state.step) d.classList.add('active');
-    });
-    if (state.step === 3) renderSummary();
-  }
-
-  function renderSummary() {
-    const sum = document.getElementById('summary');
-    const labels = {
-      service: 'Service',
-      tier: 'Scope',
-      name: 'Name',
-      email: 'Email',
-      company: 'Company',
-      phone: 'Phone',
-      vision: 'Vision'
-    };
-    const keys = ['service','tier','name','email','company','phone','vision'];
-    sum.innerHTML = keys.map(k => `
-      <div class="j-summary-row">
-        <div class="j-summary-label">${labels[k]}</div>
-        <div class="j-summary-value ${state.data[k] ? '' : 'muted'}">${state.data[k] || '— not provided —'}</div>
-      </div>
-    `).join('');
-  }
-
-  // Choice clicks
-  document.querySelectorAll('.choice').forEach(c => {
-    c.addEventListener('click', () => {
-      const key = c.dataset.key;
-      const val = c.dataset.value;
-      // Deselect siblings in same group
-      document.querySelectorAll(`.choice[data-key="${key}"]`).forEach(s => s.classList.remove('selected'));
-      c.classList.add('selected');
-      state.data[key] = val;
-      // Enable next button
-      const screen = c.closest('.journey-screen');
-      const next = screen.querySelector('[data-next]');
-      if (next) next.disabled = false;
-    });
-  });
-
-  // Continue buttons
-  document.querySelectorAll('[data-next]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Validate step 3
-      if (state.step === 2) {
-        const name = document.getElementById('j-name').value.trim();
-        const email = document.getElementById('j-email').value.trim();
-        if (!name || !email) {
-          btn.style.animation = 'none';
-          btn.offsetHeight;
-          btn.style.animation = 'shake 0.4s';
-          return;
-        }
-        state.data.name = name;
-        state.data.email = email;
-        state.data.company = document.getElementById('j-company').value.trim();
-        state.data.phone = document.getElementById('j-phone').value.trim();
-        state.data.vision = document.getElementById('j-vision').value.trim();
-      }
-      state.step = Math.min(state.step + 1, 4);
-      render();
-      window.scrollTo({ top: document.querySelector('.journey-panel').offsetTop - 100, behavior: 'smooth' });
-    });
-  });
-
-  // Back buttons
-  for (let i = 0; i < 4; i++) {
-    const b = document.getElementById(`back-${i}`);
-    if (b) b.addEventListener('click', () => {
-      state.step = Math.max(state.step - 1, 0);
-      render();
-    });
-  }
-
-  // Submit
-  const submit = document.getElementById('submit-journey');
-  if (submit) {
-    submit.addEventListener('click', () => {
-      const orig = submit.innerHTML;
-      submit.innerHTML = '<span>Sending…</span>';
-      submit.disabled = true;
-      setTimeout(() => {
-        state.step = 4;
-        render();
-      }, 1200);
-    });
-  }
-})();
-</script>
-<style>
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-8px); }
-  75% { transform: translateX(8px); }
-}
-</style>
+<script src="motion.js" defer></script>
+<script src="interactions.js" defer></script>
+<script src="anime-runner.js" defer></script>
 </body>
 </html>

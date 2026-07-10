@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Founders and operators on shipping with Aurelius Nexus." />
+<meta name="theme-color" content="#08090c" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Clients — Aurelius Nexus" />
+<meta property="og:description" content="Founders and operators on shipping with Aurelius Nexus." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Clients — Aurelius Nexus" />
+<link rel="canonical" href="https://aureliusnexus.com/testimonials.html" />
 <title>Clients — Aurelius Nexus</title>
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 30,16 16,30 2,16' fill='%23c9a35a'/></svg>" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="cursor"></div>
-<div class="cursor-dot"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <div class="preloader-mark"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></div>
+    <div class="preloader-bar"><span></span></div>
+    <div class="preloader-label">Aurelius Nexus</div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
 
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Primary">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="brand">
-        <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
         <span class="brand-name">Aurelius <em>Nexus</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -29,21 +46,21 @@
         <li><a href="testimonials.html">Clients</a></li>
         <li><a href="journey.html" class="cta">Begin Journey</a></li>
       </ul>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
 
-<section class="page-head" data-screen-label="Testimonials Head">
+<section class="page-head">
   <div class="container page-head-content">
     <div class="eyebrow center">Voices</div>
     <h1 class="display">Trusted by the <em>ambitious.</em></h1>
     <p class="sub">A small studio with a deep bench of believers. Here's what they say.</p>
-    <nav class="crumbs">
+    <nav class="crumbs" aria-label="Breadcrumb">
       <a href="index.html">Home</a>
-      <span class="sep">/</span>
+      <span class="sep" aria-hidden="true">/</span>
       <span class="current">Clients</span>
     </nav>
   </div>
@@ -51,32 +68,32 @@
 
 <section class="section">
   <div class="container">
-    <div class="testimonials-stage reveal d1">
+    <div class="testimonials-stage reveal d1" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
       <div class="t-track">
-        <article class="t-card" data-pos="0">
-          <div class="t-mark">"</div>
-          <div class="t-stars">★ ★ ★ ★ ★</div>
+        <article class="t-card" data-pos="0" aria-hidden="false">
+          <div class="t-mark" aria-hidden="true">"</div>
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">Aurelius Nexus didn't just build us a website — they built us a machine. Conversions tripled in the first quarter. The attention to detail is unlike anything I've experienced.</p>
           <div class="t-author">
-            <div class="t-avatar">RS</div>
+            <div class="t-avatar" aria-hidden="true">RS</div>
             <div><div class="t-name">Rahul S.</div><div class="t-role">CEO · FinStack Technologies</div></div>
           </div>
         </article>
-        <article class="t-card" data-pos="1">
-          <div class="t-mark">"</div>
-          <div class="t-stars">★ ★ ★ ★ ★</div>
+        <article class="t-card" data-pos="1" aria-hidden="true">
+          <div class="t-mark" aria-hidden="true">"</div>
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">Their trading insights are razor-sharp. I've been subscribed for eight months and my portfolio performance has improved dramatically. This is the real deal.</p>
           <div class="t-author">
-            <div class="t-avatar">AP</div>
+            <div class="t-avatar" aria-hidden="true">AP</div>
             <div><div class="t-name">Aditya P.</div><div class="t-role">Independent Trader</div></div>
           </div>
         </article>
-        <article class="t-card" data-pos="2">
-          <div class="t-mark">"</div>
-          <div class="t-stars">★ ★ ★ ★ ★</div>
+        <article class="t-card" data-pos="2" aria-hidden="true">
+          <div class="t-mark" aria-hidden="true">"</div>
+          <div class="t-stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="t-text">The automation pipeline they built for us saved 40+ hours a week. Our team can finally focus on growth instead of grunt work. Worth every dollar — and then some.</p>
           <div class="t-author">
-            <div class="t-avatar">VM</div>
+            <div class="t-avatar" aria-hidden="true">VM</div>
             <div><div class="t-name">Vikram M.</div><div class="t-role">COO · ScaleUp India</div></div>
           </div>
         </article>
@@ -84,46 +101,45 @@
     </div>
 
     <div class="t-controls">
-      <button class="t-btn" id="tPrev" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg></button>
-      <div class="t-dots">
-        <button class="t-dot active" aria-label="1"></button>
-        <button class="t-dot" aria-label="2"></button>
-        <button class="t-dot" aria-label="3"></button>
+      <button class="t-btn" id="tPrev" aria-label="Previous testimonial"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="t-dots" role="tablist" aria-label="Testimonial slides">
+        <button class="t-dot active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+        <button class="t-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+        <button class="t-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
       </div>
-      <button class="t-btn" id="tNext" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <button class="t-btn" id="tNext" aria-label="Next testimonial"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
     </div>
   </div>
 </section>
 
-<!-- Additional quotes grid -->
-<section class="section" style="background: linear-gradient(180deg, transparent, var(--bg-1) 30%, var(--bg-1) 70%, transparent);">
+<section class="section section-ambient">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow center">More Praise</div>
       <h2 class="display">From <em>partners</em> <br/>across pillars.</h2>
     </div>
-    <div class="services-grid">
-      <article class="service-card reveal d1">
-        <div class="t-stars" style="margin-bottom: 18px;">★ ★ ★ ★ ★</div>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"Felt like the studio cared about my brand more than I did. The launch was effortless."</p>
+    <div class="services-grid" data-stagger>
+      <article class="service-card">
+        <div class="t-stars" style="margin-bottom: 18px;" aria-label="5 out of 5 stars">★★★★★</div>
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"Felt like the studio cared about my brand more than I did. The launch was effortless."</p>
         <div class="t-author" style="border-top: 1px solid var(--line); padding-top: 16px;">
-          <div class="t-avatar">PG</div>
+          <div class="t-avatar" aria-hidden="true">PG</div>
           <div><div class="t-name">Priya G.</div><div class="t-role">Founder · Lumen Wellness</div></div>
         </div>
       </article>
-      <article class="service-card reveal d2">
-        <div class="t-stars" style="margin-bottom: 18px;">★ ★ ★ ★ ★</div>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"The signals are clean, the reasoning is sound, and the community is genuinely useful."</p>
+      <article class="service-card">
+        <div class="t-stars" style="margin-bottom: 18px;" aria-label="5 out of 5 stars">★★★★★</div>
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"The signals are clean, the reasoning is sound, and the community is genuinely useful."</p>
         <div class="t-author" style="border-top: 1px solid var(--line); padding-top: 16px;">
-          <div class="t-avatar">SN</div>
+          <div class="t-avatar" aria-hidden="true">SN</div>
           <div><div class="t-name">Sameer N.</div><div class="t-role">Portfolio Manager</div></div>
         </div>
       </article>
-      <article class="service-card reveal d3">
-        <div class="t-stars" style="margin-bottom: 18px;">★ ★ ★ ★ ★</div>
-        <p style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"Replaced three SaaS tools with one custom pipeline. Cleaner, faster, ours."</p>
+      <article class="service-card">
+        <div class="t-stars" style="margin-bottom: 18px;" aria-label="5 out of 5 stars">★★★★★</div>
+        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; color: var(--ivory); line-height: 1.5; margin-bottom: 24px;">"Replaced three SaaS tools with one custom pipeline. Cleaner, faster, ours."</p>
         <div class="t-author" style="border-top: 1px solid var(--line); padding-top: 16px;">
-          <div class="t-avatar">AK</div>
+          <div class="t-avatar" aria-hidden="true">AK</div>
           <div><div class="t-name">Anika K.</div><div class="t-role">Ops Lead · NorthBridge</div></div>
         </div>
       </article>
@@ -133,25 +149,33 @@
 
 <section class="section" style="padding-bottom: 0;">
   <div class="container">
-    <div style="text-align: center; padding: 80px 0; border-top: 1px solid var(--line);">
+    <div class="cta-band reveal">
       <div class="eyebrow center" style="margin-bottom: 20px;">Join them</div>
-      <h2 class="display" style="font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 32px;">Become our next <em>success story.</em></h2>
-      <a href="journey.html" class="btn" data-magnetic>
-        <span>Begin Your Journey</span>
-        <span class="arrow">→</span>
-      </a>
+      <h2 class="display">Become our next <em>success story.</em></h2>
+      <div class="cta-actions" style="margin-top: 32px;">
+        <a href="journey.html" class="btn" data-magnetic>
+          <span>Begin Your Journey</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
+
+<div class="mobile-cta-bar" aria-label="Quick actions">
+  <a href="journey.html" class="btn"><span>Begin Journey</span></a>
+  <a href="contact.html" class="btn btn-ghost"><span>Contact</span></a>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <a href="index.html" class="brand">
-          <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
           <span class="brand-name">Aurelius <em>Nexus</em></span>
         </a>
         <p class="footer-tag">A studio at the intersection of code, capital, and craft.</p>
@@ -167,6 +191,10 @@
   </div>
 </footer>
 
-<script src="interactions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="interactions.js" defer></script>
+<script src="anime-runner.js" defer></script>
 </body>
 </html>

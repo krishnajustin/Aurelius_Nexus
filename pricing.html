@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Transparent tiers for product, markets, and automation work." />
+<meta name="theme-color" content="#08090c" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pricing — Aurelius Nexus" />
+<meta property="og:description" content="Transparent tiers for product, markets, and automation work." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pricing — Aurelius Nexus" />
+<link rel="canonical" href="https://aureliusnexus.com/pricing.html" />
 <title>Pricing — Aurelius Nexus</title>
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,2 30,16 16,30 2,16' fill='%23c9a35a'/></svg>" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="cursor"></div>
-<div class="cursor-dot"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <div class="preloader-mark"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></div>
+    <div class="preloader-bar"><span></span></div>
+    <div class="preloader-label">Aurelius Nexus</div>
+  </div>
+</div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
 
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Primary">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="brand">
-        <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,10 30,20 20,30 10,20" fill="#c9a35a" opacity="0.18"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
         <span class="brand-name">Aurelius <em>Nexus</em></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -29,21 +46,21 @@
         <li><a href="testimonials.html">Clients</a></li>
         <li><a href="journey.html" class="cta">Begin Journey</a></li>
       </ul>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
 
-<section class="page-head" data-screen-label="Pricing Head">
+<section class="page-head">
   <div class="container page-head-content">
     <div class="eyebrow center">The Investment</div>
     <h1 class="display">Choose your <em>tier.</em></h1>
     <p class="sub">Transparent pricing. No hidden fees. Every tier includes white-glove onboarding and a personal strategy call.</p>
-    <nav class="crumbs">
+    <nav class="crumbs" aria-label="Breadcrumb">
       <a href="index.html">Home</a>
-      <span class="sep">/</span>
+      <span class="sep" aria-hidden="true">/</span>
       <span class="current">Pricing</span>
     </nav>
   </div>
@@ -51,50 +68,50 @@
 
 <section class="section">
   <div class="container">
-    <div class="pricing-grid">
-      <article class="price-card reveal d1">
+    <div class="pricing-grid" data-stagger>
+      <article class="price-card">
         <div class="price-tier">Starter</div>
         <div class="price-amount"><span class="currency">$</span>30</div>
         <div class="price-period">From / project</div>
         <p class="price-desc">Ideal for individuals and small businesses looking to establish a premium digital presence.</p>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Single-page or landing site</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fully mobile-responsive</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic SEO setup</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Contact form integration</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30-day post-launch care</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Single-page or landing site</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Fully mobile-responsive</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Basic SEO setup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Contact form integration</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 30-day post-launch care</li>
         </ul>
         <a href="journey.html" class="price-btn">Get Started</a>
       </article>
 
-      <article class="price-card featured reveal d2">
+      <article class="price-card featured">
         <div class="price-tier">Professional</div>
         <div class="price-amount"><span class="currency">$</span>90</div>
         <div class="price-period">From / project</div>
         <p class="price-desc">For growing businesses that need a full-stack solution with trading insights and automation built in.</p>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-page custom website</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Trading signals &amp; reports</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Basic automation setup</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Admin dashboard</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 90-day priority support</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Monthly strategy call</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Multi-page custom website</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Trading signals &amp; reports</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Basic automation setup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Admin dashboard</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> 90-day priority support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Monthly strategy call</li>
         </ul>
         <a href="journey.html" class="price-btn filled">Get Started</a>
       </article>
 
-      <article class="price-card reveal d3">
+      <article class="price-card">
         <div class="price-tier">Enterprise</div>
         <div class="price-amount">Custom</div>
         <div class="price-period">Tailored to your needs</div>
         <p class="price-desc">For established firms demanding end-to-end digital transformation with dedicated resources.</p>
         <ul class="price-features">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Full-stack platform build</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Premium trading intelligence</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Advanced automation pipelines</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> AI integration &amp; custom agents</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account director</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SLA &amp; ongoing retainer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Full-stack platform build</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Premium trading intelligence</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Advanced automation pipelines</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> AI integration &amp; custom agents</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account director</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> SLA &amp; ongoing retainer</li>
         </ul>
         <a href="journey.html" class="price-btn">Talk to Sales</a>
       </article>
@@ -102,48 +119,47 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section" style="background: linear-gradient(180deg, transparent, var(--bg-1) 30%, var(--bg-1) 70%, transparent);">
-  <div class="container" style="max-width: 820px;">
+<section class="section section-ambient">
+  <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow center">Common Questions</div>
       <h2 class="display">Frequently <br/><em>asked.</em></h2>
     </div>
-    <div class="reveal d1" style="display: flex; flex-direction: column; gap: 4px;">
-      <details style="padding: 22px 0; border-bottom: 1px solid var(--line); cursor: pointer;">
-        <summary style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ivory); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+    <div class="faq-list reveal d1">
+      <details class="faq-item">
+        <summary>
           What's actually included in onboarding?
-          <span style="color: var(--gold); font-size: 24px;">+</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg></span>
         </summary>
-        <p style="color: var(--ivory-2); margin-top: 14px; font-weight: 300;">A 60-minute strategy call, a written project brief, a shared workspace (Notion or Linear), access to your dedicated team channel, and a delivery roadmap with milestones — all within the first week.</p>
+        <p class="faq-body">A 60-minute strategy call, a written project brief, a shared workspace (Notion or Linear), access to your dedicated team channel, and a delivery roadmap with milestones — all within the first week.</p>
       </details>
-      <details style="padding: 22px 0; border-bottom: 1px solid var(--line); cursor: pointer;">
-        <summary style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ivory); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+      <details class="faq-item">
+        <summary>
           How long does a typical project take?
-          <span style="color: var(--gold); font-size: 24px;">+</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg></span>
         </summary>
-        <p style="color: var(--ivory-2); margin-top: 14px; font-weight: 300;">Starter projects ship in 2–3 weeks. Professional builds run 6–10 weeks. Enterprise engagements span quarters and are planned in phased releases.</p>
+        <p class="faq-body">Starter projects ship in 2–3 weeks. Professional builds run 6–10 weeks. Enterprise engagements span quarters and are planned in phased releases.</p>
       </details>
-      <details style="padding: 22px 0; border-bottom: 1px solid var(--line); cursor: pointer;">
-        <summary style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ivory); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+      <details class="faq-item">
+        <summary>
           Do you offer payment plans?
-          <span style="color: var(--gold); font-size: 24px;">+</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg></span>
         </summary>
-        <p style="color: var(--ivory-2); margin-top: 14px; font-weight: 300;">Yes. Most engagements split into 40% on signing, 40% at midpoint review, and 20% on delivery. Retainers are billed monthly in advance.</p>
+        <p class="faq-body">Yes. Most engagements split into 40% on signing, 40% at midpoint review, and 20% on delivery. Retainers are billed monthly in advance.</p>
       </details>
-      <details style="padding: 22px 0; border-bottom: 1px solid var(--line); cursor: pointer;">
-        <summary style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ivory); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+      <details class="faq-item">
+        <summary>
           What happens after the project ships?
-          <span style="color: var(--gold); font-size: 24px;">+</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg></span>
         </summary>
-        <p style="color: var(--ivory-2); margin-top: 14px; font-weight: 300;">Every tier includes a post-launch care window. After that, we offer optional monthly retainers covering monitoring, performance, content updates, and continuous improvement.</p>
+        <p class="faq-body">Every tier includes a post-launch care window. After that, we offer optional monthly retainers covering monitoring, performance, content updates, and continuous improvement.</p>
       </details>
-      <details style="padding: 22px 0; border-bottom: 1px solid var(--line); cursor: pointer;">
-        <summary style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--ivory); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+      <details class="faq-item">
+        <summary>
           Can I mix services across tiers?
-          <span style="color: var(--gold); font-size: 24px;">+</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 1v10M1 6h10"/></svg></span>
         </summary>
-        <p style="color: var(--ivory-2); margin-top: 14px; font-weight: 300;">Absolutely. The tiers are starting points, not boxes. Most engagements are scoped à la carte — start the journey and we'll tailor it together.</p>
+        <p class="faq-body">Absolutely. The tiers are starting points, not boxes. Most engagements are scoped à la carte — start the journey and we'll tailor it together.</p>
       </details>
     </div>
   </div>
@@ -151,25 +167,33 @@
 
 <section class="section" style="padding-bottom: 0;">
   <div class="container">
-    <div style="text-align: center; padding: 80px 0; border-top: 1px solid var(--line);">
+    <div class="cta-band reveal">
       <div class="eyebrow center" style="margin-bottom: 20px;">Choose your path</div>
-      <h2 class="display" style="font-size: clamp(2rem, 4vw, 3.4rem); margin-bottom: 32px;">Your tier <em>awaits.</em></h2>
-      <a href="journey.html" class="btn" data-magnetic>
-        <span>Begin Your Journey</span>
-        <span class="arrow">→</span>
-      </a>
+      <h2 class="display">Your tier <em>awaits.</em></h2>
+      <div class="cta-actions" style="margin-top: 32px;">
+        <a href="journey.html" class="btn" data-magnetic>
+          <span>Begin Your Journey</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
+
+<div class="mobile-cta-bar" aria-label="Quick actions">
+  <a href="journey.html" class="btn"><span>Begin Journey</span></a>
+  <a href="contact.html" class="btn btn-ghost"><span>Contact</span></a>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <a href="index.html" class="brand">
-          <span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#c9a35a" stroke-width="1"/><polygon points="20,14 26,20 20,26 14,20" fill="#c9a35a"/></svg></span>
           <span class="brand-name">Aurelius <em>Nexus</em></span>
         </a>
         <p class="footer-tag">A studio at the intersection of code, capital, and craft.</p>
@@ -185,11 +209,10 @@
   </div>
 </footer>
 
-<script src="interactions.js"></script>
-<style>
-details summary::-webkit-details-marker { display: none; }
-details[open] summary > span { transform: rotate(45deg); transition: 0.3s ease; }
-details summary > span { transition: 0.3s ease; display: inline-block; }
-</style>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="motion.js" defer></script>
+<script src="interactions.js" defer></script>
+<script src="anime-runner.js" defer></script>
 </body>
 </html>
