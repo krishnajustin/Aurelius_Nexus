@@ -65,13 +65,13 @@
   const vehicleLines = {
     bike: ['Bike. Classic. Moving.', 'Pedals > meetings.', 'Two wheels. Zero patience.'],
     cycle: ['Motorcycle. Obviously.', 'Throttle up. Hold on.', 'Loud entrance. Intentional.'],
-    car: ['Car. Soft life mode.', 'Driving. Don't clap.', 'Gold doors. Don't make it weird.'],
+    car: ['Car. Soft life mode.', "Driving. Don't clap.", "Gold doors. Don't make it weird."],
   };
 
   const arriveLines = {
     bike: ['Parked. Your move.', 'Bike down. Button up.'],
-    cycle: ['Kickstand. Done.', 'Here. Don't waste the click.'],
-    car: ['Parked. Let's go.', 'Doors. Action. Bye.'],
+    cycle: ['Kickstand. Done.', "Here. Don't waste the click."],
+    car: ['Parked. Let\'s go.', 'Doors. Action. Bye.'],
   };
 
   const chatLines = [
