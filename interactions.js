@@ -230,9 +230,39 @@
     }
   }
 
-  // ===== CONTACT FORM VALIDATION =====
+  // ===== WHATSAPP HANDOFF =====
+  // Opens chat with studio number + pre-filled request details
+  const WA_NUMBER = '919505570075'; // +91 95055 70075
+
+  function openWhatsApp(message) {
+    const url =
+      'https://wa.me/' +
+      WA_NUMBER +
+      '?text=' +
+      encodeURIComponent(message);
+    // Prefer new tab; fall back to same-tab if popup is blocked
+    let win = null;
+    try {
+      win = window.open(url, '_blank');
+    } catch (_) {
+      win = null;
+    }
+    if (!win) {
+      window.location.assign(url);
+    }
+  }
+
+  function line(label, value) {
+    const v = String(value || '').trim();
+    return v ? label + ': ' + v : null;
+  }
+
+  // ===== CONTACT FORM → WhatsApp =====
   const form = document.getElementById('contactForm');
   if (form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.setAttribute('data-anime-skip', 'true');
+
     const status = form.querySelector('.form-status');
 
     function setFieldError(field, msg) {
@@ -295,30 +325,48 @@
         return;
       }
 
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const subject = form.querySelector('[name="subject"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
+
+      const parts = [
+        'Hello Aurelius Nexus 👋',
+        '',
+        '*New website inquiry*',
+        line('Name', name),
+        line('Email', email),
+        line('Subject', subject),
+        '',
+        '*Message*',
+        message,
+      ].filter((p) => p !== null);
+
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.innerHTML;
-      btn.innerHTML = '<span>Sending…</span>';
+      btn.innerHTML = '<span>Opening WhatsApp…</span>';
       btn.disabled = true;
       if (status) {
         status.className = 'form-status';
         status.textContent = '';
       }
 
+      openWhatsApp(parts.join('\n'));
+
+      btn.innerHTML = '<span>Opened WhatsApp</span>';
+      btn.style.background = 'var(--gold-100)';
+      if (status) {
+        status.className = 'form-status is-success';
+        status.textContent =
+          'WhatsApp opened with your message — hit Send in the chat to reach us.';
+        status.setAttribute('role', 'status');
+      }
       setTimeout(() => {
-        btn.innerHTML = '<span>Message sent</span>';
-        btn.style.background = 'var(--gold-100)';
-        if (status) {
-          status.className = 'form-status is-success';
-          status.textContent = 'Thanks — we received your note and will reply within 24 hours.';
-          status.setAttribute('role', 'status');
-        }
-        setTimeout(() => {
-          form.reset();
-          btn.innerHTML = original;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 2800);
-      }, 1100);
+        form.reset();
+        btn.innerHTML = original;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3200);
     });
   }
 
@@ -466,13 +514,50 @@
 
     const submit = document.getElementById('submit-journey');
     if (submit) {
-      submit.addEventListener('click', () => {
-        submit.innerHTML = '<span>Sending…</span>';
-        submit.disabled = true;
-        setTimeout(() => {
-          state.step = 4;
+      // Don't let NX delay this click — WhatsApp must open from a direct user gesture
+      submit.setAttribute('data-anime-skip', 'true');
+
+      submit.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const d = state.data || {};
+        if (!d.service || !d.tier || !d.name || !d.email) {
+          // Missing earlier steps — send user back
+          state.step = !d.service ? 0 : !d.tier ? 1 : 2;
           render();
-        }, 1100);
+          return;
+        }
+
+        const parts = [
+          'Hello Aurelius Nexus 👋',
+          '',
+          '*New Journey request*',
+          line('Service', d.service),
+          line('Scope', d.tier),
+          line('Name', d.name),
+          line('Email', d.email),
+          line('Company', d.company),
+          line('Phone', d.phone),
+          '',
+          '*Vision*',
+          d.vision && String(d.vision).trim()
+            ? String(d.vision).trim()
+            : '— not provided —',
+        ].filter((p) => p !== null);
+
+        submit.innerHTML = '<span>Opening WhatsApp…</span>';
+        submit.disabled = true;
+
+        // Open WhatsApp immediately (same tick as click)
+        openWhatsApp(parts.join('\n'));
+
+        // Success screen after handoff
+        state.step = 4;
+        render();
+        submit.innerHTML =
+          '<span>Send Request</span><span class="arrow" aria-hidden="true">→</span>';
+        submit.disabled = false;
       });
     }
   }
